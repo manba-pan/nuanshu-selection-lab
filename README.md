@@ -10,10 +10,10 @@
 
 **[下载最新安装包](https://github.com/manba-pan/nuanshu-selection-lab/releases/latest)**
 
-下载 `LengShu-Selection-Tool-0.3.1-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
+下载 `LengShu-Selection-Tool-0.3.2-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
 
 ```powershell
-Get-FileHash .\LengShu-Selection-Tool-0.3.1-Windows-x64-Setup.exe -Algorithm SHA256
+Get-FileHash .\LengShu-Selection-Tool-0.3.2-Windows-x64-Setup.exe -Algorithm SHA256
 ```
 
 将结果与同一 Release 中的 SHA-256 校验文件对照。本版未做商业代码签名，Windows 可能显示未知发布者或 SmartScreen 提示；请先确认来自本仓库并核对文件，**不要关闭杀毒软件或系统防护**。
@@ -37,6 +37,7 @@ EXE约151MB只包含程序；首次完整AI模型另需约9.24GB。安装结束�
 ## 使用
 
 - 在 PS 选中**单个图层**，点击“读取当前图层”。多层/图层组会明确拒绝，不会静默读取合成图。
+- 支持 8 位和 16 位 RGB/RGBA 图层读取。16 位图层仅将内存中的分析副本转换为 8 位，原文档位深不变；暂不支持 32 位图层读取。
 - 选择主体、部位、裸肤或指定颜色；默认1B + SAM精度优先，首次处理可能需要一至数分钟。
 - 放大检查后，可框选局部目标，加保留点/排除点进行智能精修；也保留普通补选/减选画笔。
 - 点击“写回原文档选区”。程序核对文档、图层、尺寸、历史状态，保留图层偏移和透明度；不会自动保存或覆盖原文件。

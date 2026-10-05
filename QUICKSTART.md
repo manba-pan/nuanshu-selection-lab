@@ -5,7 +5,7 @@ https://github.com/manba-pan/nuanshu-selection-lab/releases/latest
 
 ## 1. 安装程序
 
-下载并运行 `LengShu-Selection-Tool-0.3.1-Windows-x64-Setup.exe`（约151MB）。选择 `Photoshop.exe` 所在文件夹；程序会安装独立面板，不加入 Dreamer。无需自己安装 Python、Anaconda 或开发工具。
+下载并运行 `LengShu-Selection-Tool-0.3.2-Windows-x64-Setup.exe`（约151MB）。选择 `Photoshop.exe` 所在文件夹；程序会安装独立面板，不加入 Dreamer。无需自己安装 Python、Anaconda 或开发工具。
 
 如 PS 已经打开，请先保存作品，安装后自行重启一次 PS，让新面板被扫描。安装器不会强制结束 Photoshop。
 
@@ -28,6 +28,8 @@ https://github.com/manba-pan/nuanshu-selection-lab/releases/latest
 打开照片，选中一个具体的像素层、背景层或支持的智能对象，点「读取当前图层」。暂不支持同时选择多个图层或整个图层组；工具不会静默改读合成图。
 
 读取保留图层位置、透明度和画布坐标。切换文档、图层或编辑内容后，请重新读取。
+
+0.3.2 修复了 16 位图层读取时可能出现的智能对象相关错误。支持 8 位和 16 位 RGB/RGBA 像素，分析副本会转换为 8 位，原文档的位深与色彩配置不变；暂不支持 32 位图层读取。
 
 ## 5. 选择、生成与修正
 
