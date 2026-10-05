@@ -1,0 +1,10 @@
+暖树 Selection Lab
+Copyright (c) 2026 暖树。保留所有权利。
+
+核心应用源码暂不公开。发布仓库用于提供原版安装包、更新记录与使用说明；未经作者许可，请勿冒用作者、移除署名或传播修改版。
+
+第三方组件与模型不属于上述闭源源码声明，分别适用随附的原始许可证。Sapiens2 使用 Sapiens2 License；SAM2/GroundingDINO 使用 Apache-2.0；BiRefNet 使用 MIT；运行库见 dependencies.txt。
+
+软件使用机器学习生成候选选区，可能误选或漏选。请保留原始文件副本并人工复核；程序不会自动保存 Photoshop 原文件。闭源编译、界面资源加密与宿主混淆不能保证无法被逆向。
+
+官方发布：https://github.com/manba-pan/nuanshu-selection-lab
