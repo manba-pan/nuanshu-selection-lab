@@ -1,6 +1,6 @@
-# 暖树 Selection Lab
+# 冷树选区工具
 
-<img src="assets/icon.png" alt="Selection Lab" width="96" />
+<img src="assets/icon.png" alt="冷树选区工具" width="96" />
 
 在 Photoshop 当前选中图层上进行人物、身体部位、裸露皮肤与衣物颜色选区。作者：**暖树**。
 
@@ -10,10 +10,10 @@
 
 **[下载最新安装包](https://github.com/manba-pan/nuanshu-selection-lab/releases/latest)**
 
-下载 `SelectionLab-0.3.0-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
+下载 `LengShu-Selection-Tool-0.3.1-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
 
 ```powershell
-Get-FileHash .\SelectionLab-0.3.0-Windows-x64-Setup.exe -Algorithm SHA256
+Get-FileHash .\LengShu-Selection-Tool-0.3.1-Windows-x64-Setup.exe -Algorithm SHA256
 ```
 
 将结果与同一 Release 中的 SHA-256 校验文件对照。本版未做商业代码签名，Windows 可能显示未知发布者或 SmartScreen 提示；请先确认来自本仓库并核对文件，**不要关闭杀毒软件或系统防护**。
@@ -23,10 +23,16 @@ Get-FileHash .\SelectionLab-0.3.0-Windows-x64-Setup.exe -Algorithm SHA256
 1. 保存正在编辑的 Photoshop 文档，运行安装程序，按提示选择 Photoshop 安装目录。写入受保护目录时，安装程序会请求一次正常的 Windows 管理员权限。
 2. 安装器准备程序、独立 PS 面板、快捷方式与所需的 Microsoft VC++ 运行库。无需安装 Python、Anaconda 或开发工具。
 3. 新安装的面板需要 Photoshop 重新启动后扫描；安装程序不会强制结束或重启 Photoshop。
-4. 双击 **Selection Lab 选区实验室**，或从 **增效工具 → Selection Lab 选区实验室** 打开。
-5. 阅读启动须知。首次点击下载并校验模型，完整模型约 **9.24 GB**，支持中断后重试续传。模型下载需要能访问公开的 Hugging Face 模型源；网络不可用时会提示，不会伪装已就绪。
+4. 双击 **冷树选区工具**，或从 **增效工具 → 冷树选区工具** 打开。
+5. 安装完成或从开始菜单打开“首次准备与教学”，阅读启动须知。首次点击下载并校验模型，完整模型约 **9.24 GB**，支持中断后重试续传。模型下载需要能访问公开的 Hugging Face 模型源；网络不可用时会提示，不会伪装已就绪。
 
 建议 Windows 10/11 x64、Photoshop 2026，至少预留25GB磁盘；建议32GB以上内存，1B高精模式建议更充裕内存。本次在48GB内存、AMD RX9070XT、Photoshop27.7环境验证。其他硬件/PS版本仍需实际测试，不能承诺全部兼容。
+
+## 安装后还需要下载模型
+
+EXE约151MB只包含程序；首次完整AI模型另需约9.24GB。安装结束会自动打开“首次准备与教学”，不用先开PS：一键下载并校验，失败可续传。以后也可从开始菜单打开教学和模型准备页。
+
+**[完整六步使用教学](QUICKSTART.md)**
 
 ## 使用
 
@@ -36,7 +42,7 @@ Get-FileHash .\SelectionLab-0.3.0-Windows-x64-Setup.exe -Algorithm SHA256
 - 点击“写回原文档选区”。程序核对文档、图层、尺寸、历史状态，保留图层偏移和透明度；不会自动保存或覆盖原文件。
 - 修改图层、切换文档后重新读取，保留原PSD副本。AI可能漏选或误选，结果始终需要人工复核。
 
-更新安装前可从开始菜单选择“停止 Selection Lab 后台”；这只停止本工具的计算/下载，不关闭 Photoshop。安装器会处理本安装目录的后台，异路径旧开发服务需要先退出。
+更新安装前可从开始菜单选择“停止冷树选区工具后台”；这只停止本工具的计算/下载，不关闭 Photoshop。安装器会处理本安装目录的后台，异路径旧开发服务需要先退出。
 
 ## 本地文件与隐私
 
