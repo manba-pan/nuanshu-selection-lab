@@ -5,11 +5,13 @@ https://github.com/manba-pan/nuanshu-selection-lab/releases/latest
 
 ## 1. 安装程序
 
-下载并运行 `LengShu-Selection-Tool-0.3.3-Windows-x64-Setup.exe`（约151MB）。选择 `Photoshop.exe` 所在文件夹；程序会安装独立面板，不加入 Dreamer。无需自己安装 Python、Anaconda 或开发工具。
+下载并运行 `LengShu-Selection-Tool-0.3.4-Windows-x64-Setup.exe`（约151MB）。选择 `Photoshop.exe` 所在文件夹；程序会安装独立面板，不加入 Dreamer。无需自己安装 Python、Anaconda 或开发工具。
 
 如 PS 已经打开，请先保存作品，安装后自行重启一次 PS，让新面板被扫描。安装器不会强制结束 Photoshop。
 
 ## 2. 先准备模型，不必先开 PS
+
+**先选保存位置：**0.3.4 首页的「模型保存位置」可输入路径（如 `D:\LengShuModels`），也可点击「选择文件夹」，再点「保存并使用此目录」。设置立即生效并在重启后保留。「打开当前目录」可以定位文件，页面同时显示磁盘可用空间。已有模型或离线包可直接选择 `models` 文件夹，校验通过即可复用。原目录不会自动搬动或删除；下载中先暂停，计算中等任务完成后再切换。
 
 安装完成会打开「首次准备与教学」。以后也能从 Windows 开始菜单 → 暖树 → 冷树选区工具 → 首次准备与教学打开。这个入口会先启动本地后台，再打开准备页。
 

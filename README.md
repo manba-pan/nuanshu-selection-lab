@@ -10,10 +10,10 @@
 
 **[下载最新安装包](https://github.com/manba-pan/nuanshu-selection-lab/releases/latest)**
 
-下载 `LengShu-Selection-Tool-0.3.3-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
+下载 `LengShu-Selection-Tool-0.3.4-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
 
 ```powershell
-Get-FileHash .\LengShu-Selection-Tool-0.3.3-Windows-x64-Setup.exe -Algorithm SHA256
+Get-FileHash .\LengShu-Selection-Tool-0.3.4-Windows-x64-Setup.exe -Algorithm SHA256
 ```
 
 将结果与同一 Release 中的 SHA-256 校验文件对照。本版未做商业代码签名，Windows 可能显示未知发布者或 SmartScreen 提示；请先确认来自本仓库并核对文件，**不要关闭杀毒软件或系统防护**。
@@ -33,6 +33,12 @@ Get-FileHash .\LengShu-Selection-Tool-0.3.3-Windows-x64-Setup.exe -Algorithm SHA
 EXE约151MB只包含程序；首次完整AI模型另需约9.24GB。安装结束会自动打开“首次准备与教学”，不用先开PS：一键下载并校验，失败可续传。以后也可从开始菜单打开教学和模型准备页。
 
 **[完整六步使用教学](QUICKSTART.md)**
+
+### 更改或打开模型目录（0.3.4）
+
+首页直接显示「模型保存位置」。可以输入完整路径或点击「选择文件夹」，再点「保存并使用此目录」；保存后立即生效，重启后仍保留。点击「打开当前目录」可在资源管理器定位模型，并显示所在磁盘可用空间。
+
+已有模型或夸克离线包可直接选择其 `models` 文件夹，校验通过后复用，无需重新下载或复制到C盘。正在下载时先暂停，正在计算时等任务完成。切换目录不搬动或删除旧文件；如需迁移，先复制到新目录，再保存新位置。新版离线导入工具也会读取此设置。
 
 ### 模型下载慢怎么办（0.3.3）
 
