@@ -10,10 +10,10 @@
 
 **[下载最新安装包](https://github.com/manba-pan/nuanshu-selection-lab/releases/latest)**
 
-下载 `LengShu-Selection-Tool-0.3.2-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
+下载 `LengShu-Selection-Tool-0.3.3-Windows-x64-Setup.exe`，同时保留对应的 SHA-256 文件。未来版本继续从上面的固定地址下载，不需要查找新的仓库。
 
 ```powershell
-Get-FileHash .\LengShu-Selection-Tool-0.3.2-Windows-x64-Setup.exe -Algorithm SHA256
+Get-FileHash .\LengShu-Selection-Tool-0.3.3-Windows-x64-Setup.exe -Algorithm SHA256
 ```
 
 将结果与同一 Release 中的 SHA-256 校验文件对照。本版未做商业代码签名，Windows 可能显示未知发布者或 SmartScreen 提示；请先确认来自本仓库并核对文件，**不要关闭杀毒软件或系统防护**。
@@ -34,6 +34,12 @@ EXE约151MB只包含程序；首次完整AI模型另需约9.24GB。安装结束�
 
 **[完整六步使用教学](QUICKSTART.md)**
 
+### 模型下载慢怎么办（0.3.3）
+
+启动页新增下载来源选择。默认自动模式优先尝试 HF-Mirror 第三方镜像，失败或持续低速时尝试 Hugging Face 官方；也可指定只使用官方源或镜像。大文件新下载最多 4 路分块续传，并显示下载速度和当前文件预计剩余时间。
+
+如果仍慢，先点击「暂停下载」，等暂停完成后换源，再点「继续下载 / 校验」。不要删除已下载文件。旧版 `.download` 文件保留单连接续传，新版分块可跨暂停或后台重启恢复；所有来源都必须通过固定 SHA-256。第三方站点的网络表现因地区和时间而异，无法保证提速倍数。
+
 ## 使用
 
 - 在 PS 选中**单个图层**，点击“读取当前图层”。多层/图层组会明确拒绝，不会静默读取合成图。
@@ -47,7 +53,7 @@ EXE约151MB只包含程序；首次完整AI模型另需约9.24GB。安装结束�
 
 ## 本地文件与隐私
 
-当前推理在本机进行，照片不自动上传云端AI。模型下载和手动打开 GitHub 会产生普通网络连接。
+当前推理在本机进行，照片不自动上传云端AI。模型下载会根据选择访问 Hugging Face 或 HF-Mirror 第三方镜像；自动模式包含第三方镜像。模型下载和手动打开 GitHub 会产生普通网络连接。
 
 图像副本、蒙版、设置及日志默认保留在：
 

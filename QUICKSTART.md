@@ -5,7 +5,7 @@ https://github.com/manba-pan/nuanshu-selection-lab/releases/latest
 
 ## 1. 安装程序
 
-下载并运行 `LengShu-Selection-Tool-0.3.2-Windows-x64-Setup.exe`（约151MB）。选择 `Photoshop.exe` 所在文件夹；程序会安装独立面板，不加入 Dreamer。无需自己安装 Python、Anaconda 或开发工具。
+下载并运行 `LengShu-Selection-Tool-0.3.3-Windows-x64-Setup.exe`（约151MB）。选择 `Photoshop.exe` 所在文件夹；程序会安装独立面板，不加入 Dreamer。无需自己安装 Python、Anaconda 或开发工具。
 
 如 PS 已经打开，请先保存作品，安装后自行重启一次 PS，让新面板被扫描。安装器不会强制结束 Photoshop。
 
@@ -16,6 +16,8 @@ https://github.com/manba-pan/nuanshu-selection-lab/releases/latest
 安装EXE只包含程序与运行库，**AI模型还需要另行准备，完整约9.24GB**。建议预留25GB以上磁盘空间。在页面点击「一键下载所需模型」，程序完成下载和SHA-256校验；下载中断后点击继续/重试，会复用已经下载的有效文件。
 
 网络必须能访问公开模型源。首次模型下载需要网络，准备完成后图片推理在本机进行。如果已有完整模型，页面会显示「模型已就绪」，不会重复下载。
+
+**模型下载慢时：**0.3.3 的「模型下载来源」默认自动（镜像优先），会访问第三方 HF-Mirror，失败或持续低速时尝试官方；也可指定 Hugging Face 官方或第三方镜像。新下载的大文件最多 4 路并发，页面显示速度和当前文件预计剩余时间。如果仍慢，点「暂停下载」，等待暂停完成后换源，再继续。不要删除模型目录；旧版未完成文件继续单连接续传，新版分块可恢复。出现「正在合并」「正在校验」表示本机正在处理文件，并非网络卡住。
 
 ## 3. 打开 Photoshop 面板
 
