@@ -10,7 +10,9 @@
 
 **[下载最新安装包](https://github.com/manba-pan/nuanshu-selection-lab/releases/latest)** · **[完整使用教学](QUICKSTART.md)**
 
-当前程序：`LengShu-Selection-Tool-0.4.0-Windows-x64-Setup.exe`。无需预装 Python、Anaconda 或 CUDA。
+当前程序：`LengShu-Selection-Tool-0.4.1-Windows-x64-Setup.exe`。无需预装 Python、Anaconda 或 CUDA。
+
+0.4.1修复默认目录校验和禁用窗口聚焦报错，旧版可直接覆盖更新；无需先卸载，模型与路径设置保留。工作台已简化，新增默认拖框即识别的对象选取，支持框内补选、减选和替换。
 
 1. 保存PS作品后安装。安装器自动发现运行中的PS、注册表和常见目录；多版本可选择，也可手动指定。
 2. 安装时可选模型目录，启动页还能改路径、复用已有模型。程序内已保存的位置优先，不自动搬动或删除旧模型。
@@ -50,7 +52,7 @@
 
 推理在本机进行，不上传照片。模型下载按选择访问HF、第三方镜像或GitHub。图片副本、结果、日志与设置默认位于 `%LOCALAPPDATA%\NuanShu\SelectionLab`；关闭面板不会自动清理，卸载默认保留数据与模型。
 
-下载后执行 `Get-FileHash .\LengShu-Selection-Tool-0.4.0-Windows-x64-Setup.exe -Algorithm SHA256`，与同一Release校验文件核对。测试版未做商业代码签名，不要关闭系统防护。
+下载后执行 `Get-FileHash .\LengShu-Selection-Tool-0.4.1-Windows-x64-Setup.exe -Algorithm SHA256`，与同一Release校验文件核对。测试版未做商业代码签名，不要关闭系统防护。
 
 核心原生编译、界面资源加密、PS桥接混淆增加逆向成本，不能保证无法逆向。AI结果需要人工复核，保留原稿。模型与运行库适用各自原始许可，原文随应用和模型资源提供。
 
